@@ -1,0 +1,71 @@
+<!-- <p>register works!</p> -->
+<div class="container">
+    <div class="card">
+    <div class="card-body">
+        <h4 class="card-header">Register</h4>
+        <!-- [formGroup]="form" (ngSubmit)="onSubmit()" -->
+        <form >
+            <div class="mb-3">
+                <label class="form-label">First Name</label>
+                <!-- [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" -->
+                <input type="text" formControlName="firstName" class="form-control"  />
+                <!-- <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                    <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                </div> -->
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Last Name</label>
+                <!-- [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" -->
+                <input type="text" formControlName="lastName" class="form-control"  />
+                <!-- <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                    <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                </div> -->
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Username</label>
+                <!-- [ngClass]="{ 'is-invalid': submitted && f.username.errors }" -->
+                <input type="text" formControlName="username" class="form-control"  />
+                <!-- <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                    <div *ngIf="f.username.errors.required">Username is required</div>
+                </div> -->
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Password</label>
+                <!-- [ngClass]="{ 'is-invalid': submitted && f.password.errors }"  -->
+                <input type="password" formControlName="password" class="form-control" />
+                <!-- <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                    <div *ngIf="f.password.errors.required">Password is required</div>
+                    <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                </div> -->
+            </div>
+            <div>
+                <button [disabled]="loading" class="btn btn-primary">
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm me-1"></span>
+                    Register
+                </button>
+                <a routerLink="../login" class="btn btn-link text-center">Login</a>
+                <!-- data-client_id="1061342156635-cubn1sgd7g4v567h64n8n5m17iefnlpj.apps.googleusercontent.com" -->
+            
+            <div id="g_id_onload"
+            data-client_id="1061342156635-cubn1sgd7g4v567h64n8n5m17iefnlpj.apps.googleusercontent.com"
+            data-context="signup"
+            data-ux_mode="popup"
+            data-login_uri="http://localhost:4200"
+            data-auto_select="true"
+            data-itp_support="true" 
+            >            
+       </div>
+       
+       <div class="g_id_signin"
+            data-type="standard"
+            data-shape="pill"
+            data-theme="filled_blue"
+            data-text="signin_with"
+            data-size="medium"
+            data-logo_alignment="left">
+       </div>
+    </div> 
+        </form>
+     </div> 
+    </div>
+</div>
